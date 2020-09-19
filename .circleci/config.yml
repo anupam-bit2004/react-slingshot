@@ -10,12 +10,14 @@ jobs:
     executor: my-executor
     steps:
       - checkout
+      - run: npm i
       - run: npm run lint 
 
   test:
     executor: my-executor
     steps:
       - checkout
+      - run: npm i
       - run: npm run test
 
 
@@ -23,6 +25,7 @@ jobs:
     executor: my-executor
     steps:
       - checkout
+      - run: npm i
       - run: npm audit
 
 workflows:
