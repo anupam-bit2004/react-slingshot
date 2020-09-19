@@ -25,7 +25,6 @@ jobs:
     executor: my-executor
     steps:
       - checkout
-      - run: npm i
       - run: npm audit
 
 workflows:
